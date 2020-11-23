@@ -1,0 +1,15 @@
+{
+  "name": "path-bruteforcer",
+  "version": "1.0.0",
+  "description": "Build a minimal web path bruteforcer: Optimised memory, CPU usage",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohitesh Ch Agarwal",
+  "license": "ISC",
+  "dependencies": {
+    "got": "^11.8.0",
+    "line-reader": "^0.4.0"
+  }
+}
