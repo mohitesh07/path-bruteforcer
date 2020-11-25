@@ -4,7 +4,7 @@ const got = require('got');
 
 const baseUrl = workerData.baseUrl;
 const fileName = workerData.fileName;
-const message = '';
+let message = '';
 
 if(baseUrl && fileName) {
     // START
@@ -14,10 +14,10 @@ if(baseUrl && fileName) {
         // console.log(`${baseUrl}/${line}`);
         got(`${baseUrl}/${line}`)
         .then(response=>{
-            message = console.log(`${baseUrl}/${line} - ${response.statusCode}`);
+            message = `${baseUrl}/${line} - ${response.statusCode}`;
         })
-        .catch(error=>{
-
+        .catch(err=>{
+            message = console.log(`${baseUrl}/${line} - ${err.message}`);
         })
     });
 } else {
